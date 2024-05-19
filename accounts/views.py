@@ -18,6 +18,7 @@ class Registration(View):
         account = models.Accounts.objects.create_user(username=username, age=age, bio=bio)
         account.set_password(password)
         account.save()
+        return redirect('login')
 
 
 class Login(View):
