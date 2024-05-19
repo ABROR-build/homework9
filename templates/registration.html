@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<style>
+    .registrattion {
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+</style>
+<body>
+<div class="registrattion">
+    <h1 class="center">Registration</h1>
+    <form method="post" action="{% url 'registration' %}"> {% csrf_token %}
+        <label for="username">Username</label><br>
+        <input type="text" name="username" id="username"><br>
+
+        <label for="age">age</label><br>
+        <input type="number" name="age" id="age"><br>
+
+        <label for="bio">bio</label><br>
+        <input type="text" name="bio" id="bio"><br>
+
+        <label for="password">password</label><br>
+        <input type="password" name="password" id="password"><br>
+
+        <button type="submit">Register</button>
+        <p>Have an account</p>
+        <a href="#">
+            Login
+        </a>
+
+    </form>
+</div>
+
+</body>
+</html>
